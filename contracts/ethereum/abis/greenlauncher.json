@@ -1,0 +1,110 @@
+[
+    {
+        "type": "constructor",
+        "stateMutability": "nonpayable",
+        "inputs": []
+    },
+    {
+        "type": "event",
+        "name": "ERC20TokenCreated",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "tokenAddress",
+                "internalType": "address",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "createToken",
+        "inputs": [
+            {
+                "type": "string",
+                "name": "name",
+                "internalType": "string"
+            },
+            {
+                "type": "string",
+                "name": "symbol",
+                "internalType": "string"
+            },
+            {
+                "type": "uint8",
+                "name": "decimals",
+                "internalType": "uint8"
+            },
+            {
+                "type": "uint256",
+                "name": "totalSupply",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "owner",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address[]",
+                "name": "",
+                "internalType": "address[]"
+            }
+        ],
+        "name": "getProjectsByOwner",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "owner",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address[]",
+                "name": "",
+                "internalType": "address[]"
+            }
+        ],
+        "name": "getTokens",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "tokens",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ]
+    }
+]

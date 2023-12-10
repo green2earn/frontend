@@ -1,0 +1,154 @@
+[
+    {
+        "type": "constructor",
+        "stateMutability": "nonpayable",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "greenToken",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "nftContract",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "vestingContract",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "ratioTokenDistribute",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "ratioTokenRelease",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "GreenToken",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "NFT",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "change_config",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "greenToken",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "nftContract",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "vestingContract",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "ratioTokenDistribute",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "ratioTokenRelease",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "get_config",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bool",
+                "name": "",
+                "internalType": "bool"
+            }
+        ],
+        "name": "mint_token",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "to",
+                "internalType": "address"
+            },
+            {
+                "type": "string",
+                "name": "media",
+                "internalType": "string"
+            },
+            {
+                "type": "uint256",
+                "name": "amount",
+                "internalType": "uint256"
+            }
+        ]
+    }
+]

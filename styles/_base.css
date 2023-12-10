@@ -1,0 +1,7 @@
+@tailwind base;
+
+body {
+	@apply overflow-y-scroll;
+	@apply scrollbar-hide;
+	@apply overflow-x-hidden;
+}

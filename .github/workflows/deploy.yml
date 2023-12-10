@@ -1,0 +1,53 @@
+name: CI/CD Green2Earn
+
+on:
+    push:
+        branches: ["dev"]
+
+jobs:
+    build_and_deploy:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [16.x]
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Set environment variables
+              run: export NEXT_PUBLIC_KEY_GOOGLE_MAP_API=$NEXT_PUBLIC_KEY_GOOGLE_MAP_API && cp .env.local.example .env
+
+            - name: Build project
+              run: npm run build && cp .env.local.example .env.production && ls -lsa
+
+            - name: Transfer files to server
+              uses: appleboy/scp-action@v0.1.4
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USER }}
+                  key: ${{ secrets.KEY }}
+                  source: "./*"
+                  target: "/home/ubuntu/packages/fe/"
+
+            - name: Restart FE Server
+              uses: appleboy/ssh-action@v0.1.10
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USER }}
+                  key: ${{ secrets.KEY }}
+                  port: ${{ secrets.PORT }}
+                  script: |
+                      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+                      . ~/.nvm/nvm.sh
+                      nvm install 16
+                      npm install -g pm2
+                      pm2 restart g2e-fe

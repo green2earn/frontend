@@ -1,0 +1,285 @@
+@import "_base.css";
+@import "_components.css";
+@import "_utilities.css";
+
+@import "_custom.css";
+
+
+.button-green-map-add-points {
+	/* Frame 14 */
+
+	/* Auto layout */
+	margin-top: 16px;
+	margin-left: 40px;
+	margin-right: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 8px;
+
+	width: 167px;
+	height: 48px;
+
+	/* Gradient Light */
+
+	background: linear-gradient(90deg, #4acc35 0%, #009a22 100%);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.button-green-map-filter {
+	/* Frame 11 */
+
+	/* Auto layout */
+	margin-top: 16px;
+	margin-left: 0px;
+	margin-right: 6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 4px;
+
+	width: 117px;
+	height: 48px;
+
+	background: #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.shadow_button_type_green_point {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bg_button_type_green_point {
+	background: linear-gradient(90deg, #4acc35 0%, #009a22 100%);
+	color: #ffffff !important;
+	cursor: pointer;
+}
+
+.button-green-map-filter:hover {
+	background: linear-gradient(90deg, #4acc35 0%, #009a22 100%);
+	color: #ffffff !important;
+	cursor: pointer;
+}
+
+.search-container {
+	margin-top: 16px;
+	margin-right: 6px;
+	width: 200px;
+	height: 40px;
+	overflow: hidden;
+	transition: width 0.3s ease;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 10px;
+
+	width: 400px;
+	height: 48px;
+
+	background: #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+
+	/* flex: none;
+	order: 1;
+	flex-grow: 0; */
+}
+
+.search-container.focus {
+	width: 300px !important;
+}
+
+.search-input {
+	color: black;
+	font-size: 14px;
+	width: 100%;
+	height: 100%;
+	/* padding: 10px; */
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+.button-search {
+	margin-top: 16px;
+	margin-right: 8px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 10px;
+
+	width: 139px;
+	height: 48px;
+
+	background: #ffffff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.content-info-window {
+	display: flex;
+	flex-direction: column;
+}
+
+.button-green-map-add-points-info-window {
+	margin-top: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 8px;
+
+	width: 100%;
+	height: 48px;
+
+	/* Gradient Light */
+
+	background: linear-gradient(90deg, #4acc35 0%, #009a22 100%);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.layer {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.heigh_google_map {
+	height: calc(100vh - 66px) !important;
+}
+
+.custom_buttom {
+	/* Frame 14 */
+
+	/* Auto layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 8px;
+
+	width: 167px;
+	height: 48px;
+
+	/* Gradient Light */
+
+	background: linear-gradient(90deg, #4acc35 0%, #009a22 100%);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 12px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.animation_infomation_green_point {
+	animation: moveRight 0.5s ease-out;
+}
+
+.animation_selected_green_point_type {
+	animation: moveBottom 0.1s ease-out;
+}
+
+@keyframes moveLeft {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes moveRight {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveBottom {
+	from {
+		transform: translateY(-10%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.hide-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.marker-position {
+	bottom: 20px;
+	left: 17px;
+	position: relative;
+	background-color: #09a507;
+	width: 24px;
+	height: 24px;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-green-map-optinal-status {
+	/* Frame 11 */
+
+	/* Auto layout */
+	margin-top: 16px;
+}
+
+.drop_shadow_right {
+	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.drop_show_around {
+	box-shadow: -2px -2px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* .custom_Div_Type_Control {
+	position: relative;
+} */
